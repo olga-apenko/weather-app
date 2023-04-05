@@ -1,0 +1,47 @@
+body {
+  font-family: sans-serif;
+}
+
+.weather-app {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.h1 {
+  font-size: 52px;
+}
+
+.link {
+  text-decoration: none;
+  transition-timing-function: ease-in-out;
+}
+
+.link:hover {
+  color: #ffff;
+}
+
+.weather-today {
+  background-image: url("images/bridge.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #ffffff;
+  height: 300px;
+  border-radius: 6px;
+  padding: 15px;
+  color: #ffff;
+  font-weight: 500;
+  filter: opacity(90%);
+}
+
+.add-city {
+  border: 1px solid rgb(187, 185, 185);
+  border-radius: 6px;
+  height: 200px;
+  display: flex;
+}
+
+.btn {
+  margin: 0 auto;
+  align-items: center;
+}
