@@ -31,8 +31,18 @@ function showTemperature(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+
+  celciusTemperature = response.data.main.temp;
+
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+    document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+    document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed * 3.6);
+    document.querySelector("#icon").setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
@@ -50,23 +60,31 @@ function showCity(event) {
 let searchForm = document.querySelector("#searchForm");
 searchForm.addEventListener("submit", showCity);
 
-// Fahrentheight to celcius
+// Fahrentheight 
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrentheightTemperature = (celciusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrentheightTemperature);
 }
 
+// Celcius 
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 12;
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
+
+let celciusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+searchCity("Kyiv");

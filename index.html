@@ -15,6 +15,7 @@
 
   <body>
     <div class="container">
+      <div class="weather-app-wrapper">
       <div class="weather-app">
         <form id="searchForm">
           <div class="input-group mt-3 mb-5">
@@ -22,6 +23,8 @@
               type="search"
               class="form-control search-input"
               placeholder="Type a city..."
+              id="city-input"
+              autocomplete="off"
               aria-describedby="button-addon2"
             />
             <input
@@ -32,122 +35,45 @@
             />
           </div>
         </form>
-
-        <h6 class="text-muted">Current location</h6>
-        <h3 class="mb-3" id="current-location">
-          Kyiv, Ukraine
-        </h3>
+        <div class="overview col-10"> 
+        <h1 class="mb-2" id="current-location">
+        </h1>
+        <ul class="list-unstyled">
+          <li id="current-day"></li>
+          <li id="description"> 
+          </li>
+        </ul>
+      </div>
         <div class="row d-flex align-items-center mb-4">
-          <div class="col-9">
+          <div class="col-10">
             <div class="weather-today mb-3 position-relative">
               <div
                 class="d-flex align-content-start justify-content-between mt-3"
               >
                 <div class="h1 position-relative">
-                  <span class="emoji">⛅ </span>
-                  <span class="temperature" id="temperature">12</span>
-                  <span class="align-text-top fs-5"
-                    ><a href="#" class="link" id="celsius-link">&#xB0;C </a> |
+                  <img src=" " alt=" " id="icon" class="float-left" />
+                  <span class="temperature" id="temperature"></span>
+                  <span class="units align-text-top fs-5"
+                    ><a href="#" class="link active" id="celsius-link">&#xB0;C </a> |
                     <a href="#" class="link" id="fahrenheit-link">
                       &#xB0;F</a
                     ></span
                   >
                 </div>
-
-                <ul class="list-unstyled fs-6 mb-2">
-                  <li id="current-day"></li>
-                  <li id="description">
-                    Partly cloudy
+                <ul class="list-unstyled">
+                  <li> Humidity: <span id="humidity"></span>% </li>
+                  <li> Wind: <span id="wind"></span> km/h
                   </li>
-                </ul>
+                </ul>             
               </div>
             </div>
           </div>
-
-          <div class="col-3">
-            <div class="add-city mb-3">
-              <button type="button" class="btn">
-                + Add city
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <h3 class="mb-3">
-          Next 6 days
-        </h3>
-        <div class="row">
-          <div class="col-2">
-            <div class="card text-center mb-3">
-              <div class="card-body">
-                <h5 class="card-title">Sat</h5>
-                <span>☀️</span>
-                <p class="card-text">
-                  11&#xB0; / 8&#xB0;
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card text-center mb-3">
-              <div class="card-body">
-                <h5 class="card-title">Sun</h5>
-                <span>☀️</span>
-                <p class="card-text">
-                  11&#xB0; / 8&#xB0;
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card text-center mb-3">
-              <div class="card-body">
-                <h5 class="card-title">Mon</h5>
-                <span>🌩️</span>
-                <p class="card-text">
-                  11&#xB0; / 8&#xB0;
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card text-center mb-3">
-              <div class="card-body">
-                <h5 class="card-title">Tue</h5>
-                <span>☁️</span>
-                <p class="card-text">
-                  11&#xB0; / 8&#xB0;
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card text-center mb-3">
-              <div class="card-body">
-                <h5 class="card-title">Wed</h5>
-                <span>🌦️</span>
-                <p class="card-text">
-                  11&#xB0; / 8&#xB0;
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card text-center mb-3">
-              <div class="card-body">
-                <h5 class="card-title">Thu</h5>
-                <span>🌦️</span>
-                <p class="card-text">
-                  11&#xB0; / 8&#xB0;
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer">
-          <p><a href="https://github.com/olga-apenko/weather-app">Open-source code</a>, by Olga Apenko</p>
-        </div>
-      </div>
+        </div>      
+      </div> 
+      <div>
+      <p><a href="https://github.com/olga-apenko/weather-app">Open-source code</a>, by Olga Apenko</p>
+    </div>
+    </div>
     </div>
     <script src="src/script.js"></script>
   </body>
