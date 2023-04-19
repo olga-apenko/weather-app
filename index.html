@@ -16,64 +16,85 @@
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
-      <div class="weather-app">
-        <form id="searchForm">
-          <div class="input-group mt-3 mb-5">
-            <input
-              type="search"
-              class="form-control search-input"
-              placeholder="Type a city..."
-              id="city-input"
-              autocomplete="off"
-              aria-describedby="button-addon2"
-            />
-            <input
-              type="submit"
-              value="Search"
-              class="btn btn-outline-secondary search-input"
-              id="button-addon2"
-            />
+        <div class="weather-app">
+          <form id="searchForm">
+            <div class="row">
+              <div class="col-12 input-group mt-3 mb-5">
+                <input
+                  type="search"
+                  class="form-control search-input"
+                  placeholder="Type a city..."
+                  id="city-input"
+                  autocomplete="off"
+                  aria-describedby="button-addon2"
+                />
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-outline-secondary search-input"
+                  id="button-addon2"
+                />
+              </div>
+            </div>
+          </form>
+          <div class="overview col-10">
+            <h1 class="mb-2" id="current-location"></h1>
+            <ul class="list-unstyled">
+              <li id="current-day"></li>
+              <li id="description"></li>
+            </ul>
           </div>
-        </form>
-        <div class="overview col-10"> 
-        <h1 class="mb-2" id="current-location">
-        </h1>
-        <ul class="list-unstyled">
-          <li id="current-day"></li>
-          <li id="description"> 
-          </li>
-        </ul>
-      </div>
-        <div class="row d-flex align-items-center mb-4">
-          <div class="col-10">
-            <div class="weather-today mb-3 position-relative">
-              <div
-                class="d-flex align-content-start justify-content-between mt-3"
-              >
-                <div class="h1 position-relative">
-                  <img src=" " alt=" " id="icon" class="float-left" />
-                  <span class="temperature" id="temperature"></span>
-                  <span class="units align-text-top fs-5"
-                    ><a href="#" class="link active" id="celsius-link">&#xB0;C </a> |
-                    <a href="#" class="link" id="fahrenheit-link">
-                      &#xB0;F</a
-                    ></span
-                  >
+          <div class="row d-flex align-items-center mb-4">
+            <div class="col-10">
+              <div class="weather-today mb-3 position-relative">
+                <div
+                  class="d-flex align-content-start justify-content-between mt-3"
+                >
+                  <div class="h1 position-relative">
+                    <img src=" " alt=" " id="icon" class="float-left" />
+                    <span class="temperature" id="temperature"></span>
+                    <span class="units align-text-top fs-5"
+                      ><a href="#" class="link active" id="celsius-link"
+                        >&#xB0;C
+                      </a>
+                      |
+                      <a href="#" class="link" id="fahrenheit-link">
+                        &#xB0;F</a
+                      ></span
+                    >
+                  </div>
+                  <ul class="list-unstyled">
+                    <li>Humidity: <span id="humidity"></span>%</li>
+                    <li>Wind: <span id="wind"></span> km/h</li>
+                  </ul>
                 </div>
-                <ul class="list-unstyled">
-                  <li> Humidity: <span id="humidity"></span>% </li>
-                  <li> Wind: <span id="wind"></span> km/h
-                  </li>
-                </ul>             
               </div>
             </div>
           </div>
-        </div>      
-      </div> 
-      <div>
-      <p><a href="https://github.com/olga-apenko/weather-app">Open-source code</a>, by Olga Apenko</p>
-    </div>
-    </div>
+        </div>
+        <div class="weather-forecast">
+          <div class="row">
+            <div class="col-2">
+              <div class="weather-forecast-date">Thu</div>
+              <img
+                src="http://openweathermap.org/img/wn/50d@2x.png"
+                alt=""
+                width="42"
+              />
+              <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperature-max"> 18° </span>
+                <span class="weather-forecast-temperature-min"> 12° </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <small>
+          <a href="https://github.com/olga-apenko/weather-app" target="_blank"
+            >Open-source code</a
+          >
+          by Olga Apenko
+        </small>
+      </div>
     </div>
     <script src="src/script.js"></script>
   </body>
