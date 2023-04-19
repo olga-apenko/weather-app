@@ -2,6 +2,10 @@ body {
   font-family: sans-serif;
 }
 
+li {
+  opacity: 0.6;
+}
+
 .weather-app-wrapper {
   max-width: 600px; 
   margin: 0 auto; 
@@ -32,12 +36,6 @@ body {
   transition-timing-function: ease-in-out;
 }
 
-/* .link:hover {
-  color: #ffff;
-} */
-
-
-
 .add-city {
   border: 1px solid rgb(187, 185, 185);
   border-radius: 6px;
@@ -49,6 +47,20 @@ body {
   margin: 0 auto;
   align-items: center;
 }
+
+.weather-forecast {
+  text-align: center;
+}
+
+.weather-forecast-date {
+  opacity: 0.6;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+}
+
+
 
 .footer {
   font-size: 14px;
