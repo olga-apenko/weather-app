@@ -29,8 +29,6 @@ li {
   cursor: default;
 }
 
-
-
 .link {
   text-decoration: none;
   transition-timing-function: ease-in-out;
@@ -59,8 +57,6 @@ li {
 .weather-forecast-temperature-min {
   opacity: 0.6;
 }
-
-
 
 .footer {
   font-size: 14px;
